@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/enterid"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="Enter your mail "
+        android:inputType="textNoSuggestions"
+        android:singleLine="true" />
+
+    <RelativeLayout
+        android:id="@+id/hiddennext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterid"
+
+        >
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="1dp"
+            android:background="#80000000"
+            android:text="hjhjhj"
+            android:textColor="#000000"
+            android:visibility="gone"></TextView>
+
+        <TextView
+            android:id="@+id/nexttext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/line"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="2dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="#3b5998"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lowerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hiddennext"
+        android:layout_margin="16dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ortext"
+
+            android:background="#80800000"
+            android:gravity="center"
+
+            ></TextView>
+
+        <TextView
+            android:id="@+id/ortext"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="OR"
+            android:textColor="#80000000"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ortext"
+            android:background="#80800000"
+            android:gravity="center"
+
+
+            ></TextView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/facebooklogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lowerlayout"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/logwithface"
+            android:background="#3b5998"
+            android:gravity="center"
+            android:text="f"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            ></TextView>
+
+        <TextView
+            android:id="@+id/logwithface"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Log in with Facebook"
+            android:textColor="#3b5998"
+            android:textSize="12sp"
+
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="By signing up,you agree to our Terms and Privacy Policy"
+            android:textColor="#80000000"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
