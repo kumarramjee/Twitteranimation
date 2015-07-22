@@ -30,7 +30,7 @@ public class signuptab extends Fragment {
     private ProgressBar mProgressbar;
     private String mEmailValidate = "";
     final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    Animatebackground mAnimatebackground;
+    public Animatebackground mAnimatebackground;
 
 
     public interface Animatebackground {
@@ -164,10 +164,6 @@ public class signuptab extends Fragment {
 
     }
 
-    private void CheckForINternetConnection() {
-
-
-    }
 
     private void ShownextText() {
         mnexttext.setVisibility(View.VISIBLE);
