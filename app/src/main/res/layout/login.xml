@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_margin="16dp"
-        android:gravity="center_vertical"
         android:background="@null"
+        android:gravity="center_vertical"
         android:hint="Username"
         android:singleLine="true" />
 
@@ -22,8 +22,8 @@
         android:layout_height="0.1dp"
         android:layout_below="@+id/enterid"
         android:layout_margin="16dp"
-        android:text="hjhjhj"
         android:background="#80000000"
+        android:text="hjhjhj"
         android:textColor="#000000"></TextView>
 
 
@@ -40,9 +40,9 @@
             android:layout_height="35dp"
             android:layout_alignParentLeft="true"
             android:layout_toLeftOf="@+id/forgotpassword"
+            android:background="@null"
             android:gravity="center_vertical"
             android:hint="password"
-            android:background="@null"
             android:inputType="textPassword" />
 
 
@@ -65,7 +65,6 @@
             android:visibility="gone" />
 
 
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -77,83 +76,87 @@
         >
 
 
-    <RelativeLayout
-        android:id="@+id/lowerlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/ortext"
-            android:gravity="center"
+        <RelativeLayout
+            android:id="@+id/lowerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            android:background="#80800000"
-            android:layout_centerVertical="true"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ortext"
 
-            ></TextView>
-        <TextView
-            android:id="@+id/ortext"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:text="OR"
-            android:textColor="#80000000"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:layout_centerVertical="true"
+                android:background="#80800000"
+                android:gravity="center"
 
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_alignParentRight="true"
-            android:layout_toRightOf="@+id/ortext"
-            android:background="#80800000"
-            android:gravity="center"
-            android:layout_centerVertical="true"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/ortext"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="OR"
+                android:textColor="#80000000"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ortext"
+                android:background="#80800000"
+                android:gravity="center"
 
 
-            ></TextView>
+                ></TextView>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/facebooklogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lowerlayout"
-        android:layout_marginTop="1dp"
-        >
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:text="f"
-            android:background="#3b5998"
-            android:textColor="#ffffff"
-            android:gravity="center"
-            android:layout_toLeftOf="@+id/logwithface"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginRight="5dp"
-            android:layout_centerVertical="true"
+        <RelativeLayout
+            android:id="@+id/facebooklogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lowerlayout"
+            android:layout_marginTop="1dp">
 
-            ></TextView>
-        <TextView
-            android:id="@+id/logwithface"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="Log in with Facebook"
-            android:textColor="#3b5998"
-            android:textSize="12sp"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:layout_centerVertical="true"
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/logwithface"
+                android:background="#3b5998"
+                android:gravity="center"
+                android:text="f"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold"
 
-            />
+                ></TextView>
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/logwithface"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="Log in with Facebook"
+                android:textColor="#3b5998"
+                android:textSize="12sp"
+
+                />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 </RelativeLayout>

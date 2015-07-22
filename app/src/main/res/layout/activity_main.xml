@@ -4,11 +4,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/ttoolbar"
+        layout="@layout/toolbar"></include>
+
     <RelativeLayout
         android:id="@+id/colorlayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/background">
+        android:layout_height="150dp"
+        android:layout_below="@+id/ttoolbar"
+        android:background="@mipmap/background">
 
         <TextView
             android:id="@+id/header"
@@ -21,13 +26,21 @@
             android:textColor="#ffffff"
             android:textSize="24sp" />
 
+        <ImageView
+            android:id="@+id/animatedbgimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/usericon"
+            android:visibility="gone" />
+
+
         <twitter.mobimedia.com.twitteranimationnn.utility.SlidingTabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/header"
-            android:layout_marginBottom="-5dp" />
+            android:layout_marginBottom="-10dp" />
 
     </RelativeLayout>
 

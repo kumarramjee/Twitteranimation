@@ -1,5 +1,6 @@
 package twitter.mobimedia.com.twitteranimationnn.fragement;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,29 @@ public class signuptab extends Fragment {
     private TextView mLIne;
     private boolean nexttextshow = true;
     private RelativeLayout mhiddennext;
+    private ProgressBar mProgressbar;
+    private String mEmailValidate = "";
+    final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    Animatebackground mAnimatebackground;
+
+
+    public interface Animatebackground {
+        public void ChangeBackgroundstate();
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+
+            mAnimatebackground = (Animatebackground) activity;
+
+        } catch (Exception e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+
+    }
 
     @Nullable
     @Override
@@ -34,17 +59,33 @@ public class signuptab extends Fragment {
         mEnterid = (EditText) v.findViewById(R.id.enterid);
         mnexttext = (TextView) v.findViewById(R.id.nexttext);
         mLIne = (TextView) v.findViewById(R.id.line);
+        mProgressbar = (ProgressBar) v.findViewById(R.id.progressbar);
 
 
         mnexttext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mnexttext.setVisibility(View.INVISIBLE);
-                View child = getActivity().getLayoutInflater().inflate(R.layout.addnexttextview, null);
-                mhiddennext.addView(child);
+                //  String email = mEnterid.getText().toString().trim();
+
+                setAnimationCall();
 
 
-                ValidateEmailID();
+                //   mnexttext.setVisibility(View.INVISIBLE);
+                // mProgressbar.setVisibility(View.VISIBLE);
+                //  mEmailValidate = ValidateEmailID(email);
+
+/*
+                if (mEmailValidate.length() == 0) {
+
+                } else {
+
+                    mEnterid.setText("Add your Full Name(optional)");
+*/
+
+                //   mProgressbar.setVisibility(View.INVISIBLE);
+
+                //  ValidateEmailIdPattern(email, emailPattern);
+//                }
 
                 //  CheckForINternetConnection();
 
@@ -71,6 +112,8 @@ public class signuptab extends Fragment {
                     mLIne.setVisibility(View.INVISIBLE);
                     mnexttext.setVisibility(View.INVISIBLE);
 
+                } else {
+
                 }
 
             }
@@ -80,20 +123,11 @@ public class signuptab extends Fragment {
         return v;
     }
 
-    private void ValidateEmailID() {
-
-        final String email = mEnterid.getText().toString().trim();
-        final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
+    private String ValidateEmailID(String email) {
+        String message = "";
         Validation validation = new Validation();
-        String message = validation.signUpValidation(email);
-
-        if (message.length() == 0) {
-            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-        } else {
-            ValidateEmailIdPattern(email, emailPattern);
-        }
-
+        message = validation.signUpValidation(email);
+        return message;
     }
 
     private void ValidateEmailIdPattern(final String email, final String emailPattern) {
@@ -108,7 +142,6 @@ public class signuptab extends Fragment {
 
                 } else {
                     Toast.makeText(getActivity(), "Invalid email address", Toast.LENGTH_SHORT).show();
-                    //or
                     // textView.setText("invalid email");
                     //   invalidmessage="Invalid email address";
                 }
@@ -126,10 +159,9 @@ public class signuptab extends Fragment {
 
     }
 
-    private void AddViewToNextView() {
-        /*View child = getFragmentManager().LayoutInflater().getLA.inflate(R.layout.addnexttextview, null);
-        mhiddennext.addView(child);
-*/
+    private void setAnimationCall() {
+        mAnimatebackground.ChangeBackgroundstate();
+
     }
 
     private void CheckForINternetConnection() {

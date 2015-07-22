@@ -17,38 +17,45 @@
         android:inputType="textNoSuggestions"
         android:singleLine="true" />
 
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/enterid"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="-5dp"
+        android:background="#80000000"
+        android:text="hjhjhj"
+        android:textColor="#000000"
+        android:visibility="gone"></TextView>
+
     <RelativeLayout
         android:id="@+id/hiddennext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/enterid"
+        android:layout_below="@+id/line"
 
         >
 
-        <TextView
-            android:id="@+id/line"
+        <ProgressBar
+            android:id="@+id/progressbar"
             android:layout_width="match_parent"
-            android:layout_height="0.1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="1dp"
-            android:background="#80000000"
-            android:text="hjhjhj"
-            android:textColor="#000000"
-            android:visibility="gone"></TextView>
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/nexttext"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_below="@id/line"
             android:layout_centerHorizontal="true"
             android:layout_margin="2dp"
             android:background="@null"
             android:gravity="center"
             android:text="Next"
             android:textColor="#3b5998"
-            android:textSize="18sp"
+            android:textSize="13sp"
             android:textStyle="bold"
             android:visibility="gone" />
     </RelativeLayout>
@@ -108,8 +115,8 @@
         android:layout_marginTop="1dp">
 
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_centerVertical="true"
             android:layout_marginRight="5dp"
             android:layout_toLeftOf="@+id/logwithface"
@@ -117,7 +124,7 @@
             android:gravity="center"
             android:text="f"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"
 
             ></TextView>

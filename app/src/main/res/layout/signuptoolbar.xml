@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/customActionbar"
+    android:id="@+id/customtoolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#80000000"
-    app:contentInsetEnd="0dp"
     android:elevation="100dp"
+    app:contentInsetEnd="0dp"
     app:contentInsetStart="0dp">
 
     <RelativeLayout
-        android:id="@+id/layoutHomeScreen"
+        android:id="@+id/toolanimation"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,23 +18,30 @@
             android:id="@+id/back_navigation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:layout_alignParentLeft="true"
             android:visibility="visible" />
+
+        <View
+            android:id="@+id/verticalline"
+            android:layout_width="0.1dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_navigation"
+            android:background="#ffffff"></View>
 
 
         <TextView
             android:id="@+id/txt_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_toRightOf="@+id/back_navigation"
-            android:layout_marginLeft="35dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:layout_toRightOf="@+id/verticalline"
+            android:gravity="center_horizontal"
             android:text="LOGIN HELP"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:visibility="visible" />
 
         <TextView
@@ -44,12 +51,11 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:textColor="#1C92FC"
+            android:text="SKIP"
+            android:textColor="#ffffff"
             android:textSize="18sp"
-            android:alpha="0.6"
-            android:textStyle="bold"
-            android:text="next"
-            android:visibility="gone" />
+            android:textStyle="normal"
+            android:visibility="visible" />
 
     </RelativeLayout>
 
